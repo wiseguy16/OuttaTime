@@ -10,6 +10,10 @@
 
 @interface SetDestinationViewController ()
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *setDestinationPicker;
+
+
+
 @end
 
 @implementation SetDestinationViewController
@@ -23,6 +27,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Action Handlers
+
+- (IBAction)cancelTapped:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    
+}
+
+- (IBAction)setTapped:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+  
+    
+}
+
+
+
 
 /*
 #pragma mark - Navigation

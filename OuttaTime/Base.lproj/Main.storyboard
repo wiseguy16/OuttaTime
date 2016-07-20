@@ -76,6 +76,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNI-gF-8T2">
                                 <rect key="frame" x="218" y="441" width="167" height="30"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
+                                <connections>
+                                    <segue destination="xjq-hl-kgN" kind="presentation" identifier="SetDestinationSegue" id="Scg-5n-HIG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl4-Za-gDd">
                                 <rect key="frame" x="253" y="511" width="98" height="30"/>
@@ -123,8 +126,43 @@
                     <view key="view" contentMode="scaleToFill" id="CZG-Cf-5SO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yne-ZB-jWV">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="490731360.21246701">
+                                    <!--2016-07-20 18:16:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOq-Xu-jzN">
+                                <rect key="frame" x="550" y="550" width="30" height="30"/>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="setTapped:" destination="xjq-hl-kgN" eventType="touchUpInside" id="r3A-Aq-UbN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HV-V9-N3T">
+                                <rect key="frame" x="20" y="550" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="xjq-hl-kgN" eventType="touchUpInside" id="AJW-mN-ot3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yne-ZB-jWV" firstAttribute="centerY" secondItem="CZG-Cf-5SO" secondAttribute="centerY" id="OQ9-hi-XLW"/>
+                            <constraint firstAttribute="trailing" secondItem="Yne-ZB-jWV" secondAttribute="trailing" id="Ukz-yY-K8F"/>
+                            <constraint firstItem="Yne-ZB-jWV" firstAttribute="leading" secondItem="CZG-Cf-5SO" secondAttribute="leading" id="VUM-92-2px"/>
+                            <constraint firstItem="7HV-V9-N3T" firstAttribute="leading" secondItem="CZG-Cf-5SO" secondAttribute="leading" constant="20" id="lkh-dz-n0X"/>
+                            <constraint firstItem="Yne-ZB-jWV" firstAttribute="centerX" secondItem="CZG-Cf-5SO" secondAttribute="centerX" id="p7p-HE-JWy"/>
+                            <constraint firstItem="aLA-lm-dUd" firstAttribute="top" secondItem="7HV-V9-N3T" secondAttribute="bottom" constant="20" id="qLq-Md-YoP"/>
+                            <constraint firstItem="aLA-lm-dUd" firstAttribute="top" secondItem="YOq-Xu-jzN" secondAttribute="bottom" constant="20" id="vFU-Ch-XT9"/>
+                            <constraint firstAttribute="trailing" secondItem="YOq-Xu-jzN" secondAttribute="trailing" constant="20" id="w1s-Md-Gd5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="setDestinationPicker" destination="Yne-ZB-jWV" id="JIk-62-LkM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW5-c1-SFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
