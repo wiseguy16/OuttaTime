@@ -31,8 +31,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C99-J8-6eV">
-                                <rect key="frame" x="193" y="115" width="214" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- -- ----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C99-J8-6eV">
+                                <rect key="frame" x="233" y="115" width="133" height="30"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="32"/>
                                 <color key="textColor" red="0.88235294119999996" green="0.067189026204945976" blue="0.11361514248797833" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -55,8 +55,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Used Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-Vr-39O">
-                                <rect key="frame" x="203" y="279" width="197" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- -- ----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-Vr-39O">
+                                <rect key="frame" x="234.5" y="279" width="133" height="30"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.38604032553479828" blue="0.13313930190258871" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -67,22 +67,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-WW-epc">
-                                <rect key="frame" x="222" y="371" width="158" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-WW-epc">
+                                <rect key="frame" x="266" y="371" width="70" height="30"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="32"/>
                                 <color key="textColor" red="0.88235294119999996" green="0.067189026200000002" blue="0.1136151425" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNI-gF-8T2">
-                                <rect key="frame" x="218" y="441" width="167" height="30"/>
+                                <rect key="frame" x="217" y="441" width="167" height="30"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
                                     <segue destination="xjq-hl-kgN" kind="presentation" identifier="SetDestinationSegue" id="Scg-5n-HIG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl4-Za-gDd">
-                                <rect key="frame" x="253" y="511" width="98" height="30"/>
+                                <rect key="frame" x="252" y="511" width="98" height="30"/>
                                 <state key="normal" title="TRAVEL BACK"/>
+                                <connections>
+                                    <action selector="travelBackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tm4-J5-YPT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18490747549019615" green="0.18490747549019615" blue="0.18490747549019615" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,6 +113,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Time Circuits" id="aWB-Ei-aTb"/>
+                    <connections>
+                        <outlet property="destinationDateLabel" destination="C99-J8-6eV" id="VFS-Fc-1HD"/>
+                        <outlet property="lastUsedDateLabel" destination="4Sa-Vr-39O" id="QHr-4y-ENr"/>
+                        <outlet property="speedMPHLabel" destination="yCg-WW-epc" id="4oP-zK-eAf"/>
+                        <outlet property="todaysDateLabel" destination="HjO-7n-kHE" id="N1p-uj-MIv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DateSetDelegate
+
+- (void)dateWasChosen:(NSDate*)dateValue; // goes in this header cause it will receive data
+
+
+@end
+
+
 @interface ConsoleDisplayViewController : UIViewController
 
 

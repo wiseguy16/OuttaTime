@@ -18,8 +18,11 @@
 
 @implementation SetDestinationViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //[self.setDestinationPicker setDate:[NSDate date]];
     // Do any additional setup after loading the view.
 }
 
@@ -40,6 +43,8 @@
 
 - (IBAction)setTapped:(UIButton *)sender
 {
+    
+    [self.delegate dateWasChosen:self.setDestinationPicker.date];
     [self dismissViewControllerAnimated:YES completion:nil];
   
     
