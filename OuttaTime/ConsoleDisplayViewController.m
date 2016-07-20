@@ -6,13 +6,13 @@
 //  Copyright © 2016 Gregory Weiss. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ConsoleDisplayViewController.h"
 
-@interface ViewController ()
+@interface ConsoleDisplayViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ConsoleDisplayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

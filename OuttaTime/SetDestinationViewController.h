@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SetDestinationViewController.h
 //  OuttaTime
 //
 //  Created by Gregory Weiss on 7/20/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SetDestinationViewController : UIViewController
 
 @end
-
